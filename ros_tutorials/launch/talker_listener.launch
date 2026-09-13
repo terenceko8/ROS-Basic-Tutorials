@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="ros_tutorials" type="listener" name="listener" output="screen" />
+    <node pkg="ros_tutorials" type="talker" name="talker" output="screen" />
+</launch>

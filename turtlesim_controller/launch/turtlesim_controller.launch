@@ -1,0 +1,16 @@
+<launch>
+
+<!-- <node pkg="turtlesim_controller" type="turtlesim_controller" name="turtlesim_controller"
+output="screen"/> -->
+
+<node pkg="turtlesim_controller" type="turtlesim_controller" name="turtlesim_controller"
+output="screen">
+
+<rosparam command="load" file="$(find turtlesim_controller)/config/controller.yaml"/>
+</node>
+
+<node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node" output="screen"/>
+
+<include file="$(find ros_tutorials)/launch/talker_listener.launch"/>
+
+</launch>
